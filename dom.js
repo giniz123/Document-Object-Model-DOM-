@@ -22,13 +22,13 @@
 // elm.innerHTML = "<h3>Server messages have been updated</h3>";
 // console.log(elm);
 
-const elm = document.querySelector("body");
+// const elm = document.querySelector("body");
 
 // const textNode = document.createTextNode("Hello this is text node");
 // elm.appendChild(textNode);
-const newElement = document.createElement("p");
-newElement.innerText =
-  "Hello, this is paragraph element added from Javascript!";
+// const newElement = document.createElement("p");
+// newElement.innerText =
+//   "Hello, this is paragraph element added from Javascript!";
 
 // elm.appendChild(newElement);
 
@@ -36,4 +36,16 @@ newElement.innerText =
 
 // elm.removeChild(document.querySelector(`[href="google.com"]`));
 
-elm.replaceChild(newElement, document.querySelector(`[href="google.com"]`));
+// elm.replaceChild(newElement, document.querySelector(`[href="google.com"]`));
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+
+/* CSS Manipulation from DOM */
+
+const googleElm = document.querySelector(`[href="google.com"]`);
+
+googleElm.style.fontSize = "2rem";
+googleElm.style.color = "green";
+googleElm.style.textDecoration = "none";
