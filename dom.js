@@ -44,8 +44,29 @@
 
 /* CSS Manipulation from DOM */
 
-const googleElm = document.querySelector(`[href="google.com"]`);
+// const googleElm = document.querySelector(`[href="google.com"]`);
 
-googleElm.style.fontSize = "2rem";
-googleElm.style.color = "green";
-googleElm.style.textDecoration = "none";
+// googleElm.style.fontSize = "2rem";
+// googleElm.style.color = "green";
+// googleElm.style.textDecoration = "none";
+
+// Changing attribute of HTML
+
+// getAttribute()
+
+// const elm1 = document.querySelector(`[href="google.com"]`);
+// const attbr = elm1.getAttribute("href");
+// console.log(attbr);
+
+document
+  .querySelector(".display")
+  .setAttribute(
+    "style",
+    "font-size:2rem; color: orangered; text-decoration: underline"
+  );
+
+document.querySelector(".display").setAttribute("href", "linked");
+
+document.querySelector(".display").removeAttribute("href");
+
+document.querySelector("a").removeAttribute("href");
