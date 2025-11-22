@@ -58,15 +58,27 @@
 // const attbr = elm1.getAttribute("href");
 // console.log(attbr);
 
-document
-  .querySelector(".display")
-  .setAttribute(
-    "style",
-    "font-size:2rem; color: orangered; text-decoration: underline"
-  );
+// document
+//   .querySelector(".display")
+//   .setAttribute(
+//     "style",
+//     "font-size:2rem; color: orangered; text-decoration: underline"
+//   );
 
-document.querySelector(".display").setAttribute("href", "linked");
+// document.querySelector(".display").setAttribute("href", "linked");
 
-document.querySelector(".display").removeAttribute("href");
+// document.querySelector(".display").removeAttribute("href");
 
-document.querySelector("a").removeAttribute("href");
+// document.querySelector("a").removeAttribute("href");
+
+// Changing HTML class names
+
+const elm2 = document.querySelector(".message");
+
+// elm2.className = "hello";
+elm2.classList.add("success");
+
+elm2.classList.remove("message");
+
+elm2.classList.toggle("success");
+console.log(elm2.classList);
