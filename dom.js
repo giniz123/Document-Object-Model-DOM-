@@ -73,12 +73,45 @@
 
 // Changing HTML class names
 
-const elm2 = document.querySelector(".message");
+// const elm2 = document.querySelector(".message");
 
 // elm2.className = "hello";
-elm2.classList.add("success");
+// elm2.classList.add("success");
 
-elm2.classList.remove("message");
+// elm2.classList.remove("message");
 
-elm2.classList.toggle("success");
-console.log(elm2.classList);
+// elm2.classList.toggle("success"); => if exits then it removes else it just adds
+// console.log(elm2.classList);
+
+// DOM Events
+// It is when you do some actions then somethings happen (i.e some events happen)
+
+// 1. One way to create event combining javascript and html
+// const changeUI = (e) => {
+//   console.log("Event triggered");
+//   //   alert(`You clicked on "Click Me!`);
+//   console.log(e);
+// };
+
+// 2. Another way to create event only using javascript
+// Syntax => element.addEventListner("click", callfunction)
+
+let counter = 0;
+const clickMe = document.querySelector(".display");
+
+// clickMe.addEventListener("click", (e) => {
+//   //   console.log("Event triggered");
+//   //   console.log(e);
+//   clickMe.classList.toggle("success");
+// });
+
+const func = (e) => {
+  //   console.log("Event triggered");
+  //   console.log(e);
+  clickMe.classList.toggle("success");
+  console.log(counter++);
+  if (counter === 2) {
+    return clickMe.removeEventListener("click", func);
+  }
+};
+clickMe.addEventListener("click", func);
